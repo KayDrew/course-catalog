@@ -2,7 +2,7 @@
 
 describe('Test for greet function' , function(){
 
-    it('Return discount for course based on start date' , function(){
+    it('Return discount for p1 based on start date' , function(){
     	
     const course= courseCost("p1",9);
     
@@ -41,11 +41,22 @@ it('Return total cost for p1 course based on start date' , function(){
 });
 
 
-it('Return invalid day if incorrect code is passed' , function(){
+it('Return invalid code if incorrect code is passed' , function(){
     	
     const course= courseCost("t1",15);
     
  assert.equal("Invalid code",course.status);
 });
+
+
+it('Return invalid day if an invalid date is passed' , function(){
+    	
+    const course= courseCost("p1","u");
+    
+ assert.equal("Invalid day",course.status);
+});
+
+
+
 
 });
