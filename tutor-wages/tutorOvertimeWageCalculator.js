@@ -29,7 +29,7 @@ if(totalHours>40){
 
 if(level==1){
 
-var rounded=Math.ceil((totalHours-40)*(level1overTimeRate*level1+level1));
+var rounded=(totalHours-40)*(level1overTimeRate*level1+level1);
 	
     overTimeWages=rounded;
    
