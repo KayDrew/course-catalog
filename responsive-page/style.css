@@ -1,0 +1,31 @@
+
+body{
+    margin: auto;
+    width: 90%;
+}
+
+@media  screen and (min-width:960px){
+
+    .courses{
+        display: flex;
+    }
+
+    .course{
+        flex-basis: auto;
+        margin: auto;
+        padding: 7px;
+    }
+
+    img{
+        width: 80%;
+    }
+}
+
+
+@media  screen and (min-width:960px) and (max-width:1200){
+
+ 
+
+
+}
+
