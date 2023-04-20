@@ -1,5 +1,13 @@
 function tutorOvertimeWageCalculator(timeSheet,level){
-
+    var arr=timeSheet.split("-");
+   
+    var overTimeWages=0;
+    var level1=75;
+    var level1overTimeRate=0.07;
+    var level2overTimeRate=0.09;
+    var level3overTimeRate=0.12;
+    var level2=90;
+    var level3=105;
     
 var overTimeWages=0;
 
@@ -15,9 +23,13 @@ var hour=parseInt(arr[i]);
 	totalHours+=hour;
 
 }
+
+
+if(totalHours>40){
+
 if(level==1){
 	
-    overTimeWages=(totalHours-40)*level1overTimeRate;
+    overTimeWages=(totalHours-40)*(level1overTimeRate*level1+level1);
    
     }
     
@@ -35,4 +47,9 @@ if(level==1){
 
 
 }
+
+}
+
+
+return overTimeWages;
 }
